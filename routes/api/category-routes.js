@@ -42,7 +42,7 @@ router.put('/:id', (req, res) => {
   .catch((err) => res.status(400).json(err))
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
     where: {
