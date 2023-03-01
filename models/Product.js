@@ -12,19 +12,6 @@ class Product extends Model {}
 Product.init(
   {
     // define columns
-
-// - price
-//   - Decimal
-//   - Doesn't allow null values
-//   - Validates that the value is a decimal
-// - stock
-//   - Integer
-//   - Doesn't allow null values
-//   - Set a default value of 10
-//   - Validates that the value is numeric
-// - category_id
-//   - Integer
-//   - References the category model's id
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -52,8 +39,22 @@ Product.init(
   stock: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    defaultValue: 
-  }
+    defaultValue: 10,
+    validate: {
+      isNumeric: {
+        args: true,
+        msg: 'Stock must be a numeric value',
+      },
+    },
+  },
+  category_id: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    references: {
+      model: Category,
+      key: 'id',
+    },
+  },
   },
   {
     sequelize,
@@ -63,5 +64,7 @@ Product.init(
     modelName: 'product',
   }
 );
+
+Product.belongsTo(Category, { foreignKey: 'category_id' });
 
 module.exports = Product;
