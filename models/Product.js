@@ -3,8 +3,6 @@ const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
 
-const validator = require('validator');
-
 // Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
@@ -28,30 +26,20 @@ Product.init(
     validate: {
       isDecimal: true,
     },
-    //OR
-    // {
-    //   isDecimal: {
-    //     args: /^\d+(\.\d{1,2})?$/,
-    //     msg: 'Price must be a decimal number with up to two decimal places',
-    //   },
-    // }
   },
   stock: {
     type: DataTypes.INTEGER,
     allowNull: false,
     defaultValue: 10,
     validate: {
-      isNumeric: {
-        args: true,
-        msg: 'Stock must be a numeric value',
-      },
+      isNumeric: true,
     },
   },
   category_id: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: Category,
+      model: 'category',
       key: 'id',
     },
   },
@@ -64,7 +52,5 @@ Product.init(
     modelName: 'product',
   }
 );
-
-Product.belongsTo(Category, { foreignKey: 'category_id' });
 
 module.exports = Product;

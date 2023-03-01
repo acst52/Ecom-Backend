@@ -15,8 +15,8 @@ Category.init(
     },
     category_name: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   },
   {
     sequelize,
@@ -26,7 +26,5 @@ Category.init(
     modelName: 'category',
   }
 );
-
-// Category.addHook('beforeCreate', async(newCategoryData)=>{});
 
 module.exports = Category;
