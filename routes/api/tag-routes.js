@@ -6,10 +6,8 @@ const { Tag, Product, ProductTag } = require('../../models');
 router.get('/', (req, res) => {
   // find all tags
   // be sure to include its associated Product data
-    // ***** FIX BELOW WHEN CONFUSION PASSES *****
   Tag.findAll({
     include: [
-      Product,
       {
         model: Product,
         through: ProductTag
