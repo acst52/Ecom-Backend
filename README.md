@@ -3,7 +3,7 @@
 
 ## Description
 
-In this Module 13 Challenge, we were tasked to build the back-end for an e-commerce website! We took an [existing working Express.js API](https://github.com/coding-boot-camp/fantastic-umbrella) and configured it to interact with MySQL using the npm package Sequelize. you can peep my walkthrough video here: [Walkthrough Video](GOOGLE DRIVE LINK).
+In this Module 13 Challenge, we were tasked to build the back-end for an e-commerce website! We took an [existing working Express.js API](https://github.com/coding-boot-camp/fantastic-umbrella) and configured it to interact with MySQL using the npm package Sequelize. You can peep my walkthrough video here: [Walkthrough Video](GOOGLE DRIVE LINK).
 
 ## Table of Contents
 
