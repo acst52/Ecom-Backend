@@ -4,7 +4,7 @@
 ## Description
 
 In this Module 13 Challenge, we were tasked to build the back-end for an e-commerce website! We took an [existing working Express.js API](https://github.com/coding-boot-camp/fantastic-umbrella) and configured it to interact with MySQL using the npm package Sequelize. We tested all the endpoints in Insomnia Core, which you can see in the walkthrough video. You can peep said walkthrough video here: 
-[![Walkthrough Video](https://user-images.githubusercontent.com/116177485/233114896-ed950b77-7bdd-4410-87bf-6a2f27c3f8f1.png)](https://drive.google.com/file/d/1yTSH7QAv1dDj6KWegUHgSyVFrFIM70tX/view).
+[![Walkthrough Video](https://user-images.githubusercontent.com/116177485/233114896-ed950b77-7bdd-4410-87bf-6a2f27c3f8f1.png)](https://drive.google.com/file/d/1yTSH7QAv1dDj6KWegUHgSyVFrFIM70tX/view)
 
 ## Table of Contents
 
